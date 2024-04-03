@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
 int main(){
     cout.tie(0);
     cin.tie(0);
@@ -14,18 +15,11 @@ int main(){
 
     int len = pipe.length();
     for(int i=0; i<len; i++){
-        if(pipe[i] == '('){
-            count++;
-        }
-        else { // if(pipe[i] == ')')
-            if(pipe[i-1] == '('){
-                count--;
-                sum += count;
-            }
-            else {
-                count--;
-                sum++;
-            }
+        if(pipe[i] == '(') count++;
+        else {
+            count--;
+            if(pipe[i-1] == '(') sum += count;
+            else sum++;
         }
     }
     cout << sum << "\n";
