@@ -9,15 +9,13 @@ promise = [
 ]
 
 n = int(input())
-check = False
+check = 0
 
 for i in range(n):
     p = input()
     if p not in promise:
-        check = True
+        check = 1
         break
 
-if check:
-    print("Yes")
-else:
-    print("No")
+if check==1: print("Yes")
+else: print("No")
