@@ -8,10 +8,10 @@ promise = [
     "Never gonna stop",
 ]
 
-N = int(input())
+n = int(input())
 check = False
 
-for _ in range(N):
+for i in range(n):
     p = input()
     if p not in promise:
         check = True
