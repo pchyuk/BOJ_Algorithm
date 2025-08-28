@@ -19,10 +19,6 @@ int main(){
     sort(p.begin(), p.end());
     reverse(p.begin(), p.end());
 
-    // for(int i=0; i<m; i++){
-    //     cout << p[i].first << " " << p[i].second << "\n";
-    // }
-
     int sum = 0, cnt = 0;
     vector<int> v;
 
@@ -32,7 +28,7 @@ int main(){
             cnt++;
             v.push_back(p[i].second);
         }
-        if(sum >= n && sum <= 2*n) break;
+        if(sum >= n) break;
     }
 
     cout << cnt << "\n";
